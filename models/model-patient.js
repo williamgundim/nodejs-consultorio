@@ -32,11 +32,26 @@ class ModelPatients{
 
         connection.query(sql, (error, result, fields)=>{
 
+            let oJson = {};
+            let aArray = [];
+            let x = 0;
+
             if (error){
                 response.status(400).json(error) //bad request.
             }else{
-                response.status(200).json(result)// ok.
+                
+                for (x = 0; x < result.length; x++){                 
+                    aArray.push( result[x] );
+                }
+
+                oJson = {
+                    'items': aArray,
+                    'hasNext': false
+                }
+
+                response.status(200).json(oJson);
             }
+
 
         })
 
