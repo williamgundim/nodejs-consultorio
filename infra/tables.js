@@ -24,7 +24,8 @@ class Tables{
                     'BIRTHDAY date,' +
                     'OCCUPATION varchar(50),' +
                     'CPF varchar(20),'+
-                    'RG varchar(20),'+             
+                    'RG varchar(20),'+
+                    'STATUS integer,'+             
                     'PRIMARY KEY(ID))' 
 
         this.connection.query(sql, (error)=>{
