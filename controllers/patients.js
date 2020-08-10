@@ -30,7 +30,19 @@ module.exports = app => {
     app.post('/pacientes', (req, res) => {
         
         const value = req.body;
+
         model.createItem(value, res);
+
+    });
+
+
+    app.put('/paciente/:id', (req, res) => {
+
+        const value = req.body;
+        const id = req.params.id;
+
+        model.updateItem(value, id, res);
+
 
     });
 

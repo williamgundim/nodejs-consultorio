@@ -23,6 +23,24 @@ class ModelPatients{
 
     }
 
+    updateItem(patient, id, response){
+
+        const sql = 'UPDATE PATIENTS SET ? WHERE ID = ' + id;
+        
+        connection.query(sql, patient, (error, result) =>{
+
+            if (error){
+                response.status(400).json(error) //bad request
+            }else{
+                response.status(201).json(result) //create
+            }
+
+        });
+
+
+    }
+
+
     /**
      * getItems()
      */
