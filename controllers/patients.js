@@ -36,7 +36,7 @@ module.exports = app => {
     });
 
 
-    app.put('/paciente/:id', (req, res) => {
+    app.put('/pacientes/:id', (req, res) => {
 
         const value = req.body;
         const id = req.params.id;
