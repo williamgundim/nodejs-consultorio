@@ -1,5 +1,5 @@
 
-const model = require('../models/model-avaliacao');
+const model = require('../models/model-avlc-one');
 const connection = require('../infra/connection');
 
 module.exports = app => {
@@ -7,7 +7,7 @@ module.exports = app => {
     /**
      * Rota para cadastrar um novo paciente
      */
-    app.post('/avaliacao', (req, res) => {
+    app.post('/avlcone', (req, res) => {
         
         const value = req.body;
 
@@ -16,7 +16,7 @@ module.exports = app => {
     });
 
 
-    app.put('/avaliacao/:id', (req, res) => {
+    app.put('/avlcone/:id', (req, res) => {
 
         const value = req.body;
         const id = req.params.id;

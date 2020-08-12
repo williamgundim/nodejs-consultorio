@@ -1,6 +1,6 @@
 const connection = require('../infra/connection');
 
-class ModelPatients{
+class ModelAvlcOne{
     
     /**
      * create new item
