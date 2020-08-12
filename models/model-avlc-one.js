@@ -96,4 +96,4 @@ class ModelAvlcOne{
     }
 }
 
-module.exports = new ModelPatients;
+module.exports = new ModelAvlcOne;
