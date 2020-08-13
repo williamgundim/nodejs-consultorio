@@ -55,7 +55,13 @@ class Tables{
                        'NOME_EMAGRECEDOR varchar(100),'+
                        'SUPLEMENTOS integer,'+
                        'NOME_SUPLEMENTOS varchar(100),'+
-                       'PRIMARY KEY (ID_AVLC))'  
+                       'PRIMARY KEY (ID_AVLC))' 
+        
+        //avaliacao-page-three
+        const sqlThree = 'CREATE TABLE IF NOT EXISTS AVLC_THREE (' +
+                         'ID_DOENCA integer,' +
+                         'ID_PATIENT integer,'+
+                         'PRIMARY KEY (ID_DOENCA, ID_PATIENT))'
 
         this.connection.query(sql, (error)=>{
             if (error) {
@@ -64,6 +70,12 @@ class Tables{
         });
 
         this.connection.query(sqlOne, (error)=>{
+            if (error) {
+                console.log(error);
+            }            
+        });
+
+        this.connection.query(sqlThree, (error)=>{
             if (error) {
                 console.log(error);
             }            
