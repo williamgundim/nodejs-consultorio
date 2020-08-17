@@ -9,32 +9,52 @@ class ModelAvlcThree{
      */
     createItem(body, response){
 
-        const idPaciente = body.IDPACIENTE;
+        const idPaciente = parseInt(body.IDPACIENTE);
         const listItems = body.LISTID;
-        let sql = '';
-        let status = 0;
 
-        listItems.forEach( item => {
-            
-            sql = `INSERT INTO AVLC_THREE (ID_PATIENT, ID_DOENCA) VALUES (${idPaciente},?)`;
-            
-            connection.query(sql,item, (error, result)=>{
-    
-                if (error){
-                    status = 400;
-                }else{
-                    result = 201;
-                }
-    
-            })
-
-            response.status(status).json('');
-
-
-        });
+        this.deleteItems(idPaciente)
+            .then(
+                    this.insertItems(idPaciente,listItems)
+                        .then(  response.status(200).json('ok'))
+                        .catch( response.status(400).json('bad request')));
 
     }
 
+    deleteItems(idPaciente){
+        let sqlDelete = `DELETE FROM AVLC_THREE WHERE ID_PATIENT = ${idPaciente}`
+        
+        const promisse = new Promise((resolve, project) => {
+
+            connection.query(sqlDelete, (error, result)=>{        
+            })
+
+            resolve('ok');
+        
+        });
+
+        return promisse
+        
+    }
+
+    insertItems(idPaciente, listItems){
+        let sql = ''
+        const promisse = new Promise( (resolve, project) =>{
+
+            listItems.forEach( item => {
+            
+                sql = `INSERT INTO AVLC_THREE (ID_PATIENT, ID_DOENCA) VALUES (${idPaciente},?)`;
+                
+                connection.query(sql, parseInt(item), (error, result)=>{        
+                })
+    
+            });
+
+            resolve('ok');
+
+        })
+
+        return promisse
+    }
 
 /**
      * getItems()

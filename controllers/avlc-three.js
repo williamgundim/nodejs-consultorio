@@ -20,6 +20,8 @@ module.exports = app => {
 
         model.createItem(value, res);
 
+        console.log('teste');
+
     });
 
 
