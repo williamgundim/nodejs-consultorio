@@ -6,7 +6,7 @@ module.exports = app => {
      * Rota para cadastrar/retornar os valores da terceira pagina da avaliação.
      */
 
-    app.get('/avlcthree/id', (request, response)=> {
+    app.get('/avlcthree/:id', (request, response)=> {
 
         const idPaciente = request.params.id;
 

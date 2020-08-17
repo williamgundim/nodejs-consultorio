@@ -44,7 +44,7 @@ class ModelAvlcThree{
             
                 sql = `INSERT INTO AVLC_THREE (ID_PATIENT, ID_DOENCA) VALUES (${idPaciente},?)`;
                 
-                connection.query(sql, parseInt(item), (error, result)=>{        
+                connection.query(sql, item, (error, result)=>{        
                 })
     
             });

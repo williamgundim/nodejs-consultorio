@@ -59,7 +59,7 @@ class Tables{
         
         //avaliacao-page-three
         const sqlThree = 'CREATE TABLE IF NOT EXISTS AVLC_THREE (' +
-                         'ID_DOENCA integer,' +
+                         'ID_DOENCA varchar(2),' +
                          'ID_PATIENT integer,'+
                          'PRIMARY KEY (ID_DOENCA, ID_PATIENT))'
 
