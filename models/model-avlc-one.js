@@ -7,20 +7,47 @@ class ModelAvlcOne{
      * @param {*} patient 
      * @param {*} response 
      */
-    createItem(patient, response){
+    createItem(body, response){
 
+        const idPaciente = parseInt(body.ID_PATIENT);
+
+        this.deleteItems(idPaciente)
+            .then(
+                    this.insertItems(body)
+                        .then(  response.status(200).json('ok'))
+                        .catch( response.status(400).json('bad request')))
+            .catch();
+
+    }
+
+
+    insertItems(body){
         const sql = 'INSERT INTO AVLC_ONE SET ?'
 
-        connection.query(sql, patient, (error, result)=>{
+        const promisse = new Promise((resolve, reject) => {
+            connection.query(sql, body, (error, result)=>{});
 
-            if (error){
-                response.status(400).json(error) //bad request
-            }else{
-                response.status(201).json(result) //create
-            }
+            resolve('ok');
 
-        })
+        });
+            
+        return promisse
 
+    }
+
+    deleteItems(idPaciente){
+        let sqlDelete = `DELETE FROM AVLC_ONE WHERE ID_PATIENT = ${idPaciente}`
+        
+        const promisse = new Promise((resolve, reject) => {
+
+            connection.query(sqlDelete, (error, result)=>{});
+
+            resolve('ok')
+        
+        });
+
+        return promisse
+        
     }
 
     updateItem(patient, id, response){
@@ -44,56 +71,26 @@ class ModelAvlcOne{
     /**
      * getItems()
      */
-    getItems(response){
+    getItems(id, response){
 
-        const sql = 'SELECT * FROM AVLC_ONE'
+        const sql = `SELECT * FROM AVLC_ONE WHERE ID_PATIENT = ${id}`
 
         connection.query(sql, (error, result, fields)=>{
 
-            let oJson = {};
-            let aArray = [];
-            let x = 0;
-
-            if (error){
-                response.status(400).json(error) //bad request.
-            }else{
+        if (error){
+            response.status(400).json(error) //bad request.
+          }else{
                 
-                for (x = 0; x < result.length; x++){                 
-                    aArray.push( result[x] );
-                }
-
-                oJson = {
-                    'items': aArray,
-                    'hasNext': false
-                }
-
-                response.status(200).json(oJson);
-            }
-
-
-        })
-
-    }
-
-    /**
-     * Retorna apenas um item para a API.
-     * @param {*} id 
-     */
-    getOne(id, response){
-
-        const sql = `SELECT * FROM AVLC_ONE WHERE ID_PATIENT = ${id} `;
-
-        connection.query(sql, (error, results, fields)=>{
-
-            if (error){
-                response.status(400).json(error) //bad request.
+            if (result.length > 0) {
+                response.status(200).json(result[0]);
             }else{
-                response.status(200).json(results[0])// ok.
+                response.status(404).json('not found');
             }
-
-        })
+               
+        }})
 
     }
+
 }
 
 module.exports = new ModelAvlcOne;

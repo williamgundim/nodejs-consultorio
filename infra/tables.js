@@ -32,7 +32,7 @@ class Tables{
         const sqlOne = 'CREATE TABLE IF NOT EXISTS AVLC_ONE (' +
                        'ID_AVLC int NOT NULL AUTO_INCREMENT, ' +
                        'ID_PATIENT integer,' +
-                       'ANOMARCA date,' +
+                       'ANOMENARCA date,' +
                        'NUMEROGPA integer,'+
                        'QNTOTEMPO varchar(100),'+
                        'PARTO varchar(100),'+

@@ -26,6 +26,13 @@ module.exports = app => {
 
     });
 
+    app.get('/avlcone/:id', (request, response)=> {
+
+        const idPaciente = request.params.id;
+
+        model.getItems(idPaciente, response);
+
+    });
 
     /**example json:
      * {
