@@ -55,7 +55,30 @@ class Tables{
                        'NOME_EMAGRECEDOR varchar(100),'+
                        'SUPLEMENTOS integer,'+
                        'NOME_SUPLEMENTOS varchar(100),'+
-                       'PRIMARY KEY (ID_AVLC))' 
+                       'PRIMARY KEY (ID_AVLC))'
+                       
+        //avaliacao-page-two
+        const sqlTWo = 'CREATE TABLE IF NOT EXISTS AVLC_TWO (' +
+                       'ID_AVLC int NOT NULL AUTO_INCREMENT, ' +
+                       'ID_PATIENT integer,' +
+                       'INTESTINO integer,' +
+                       'LIQUIDOS integer,' +
+                       'LITROS varchar(100),' +
+                       'QTDE_TABACO varchar(100),' +
+                       'ALCOOL integer,' +
+                       'QTDE_ALCOOL integer,' +
+                       'SOL integer,' +
+                       'FILTROSOLAR varchar(100),' +
+                       'LENTECONTATO integer,' +
+                       'ATIVIDADEFISICA integer,' +
+                       'DESC_ATIVIDADE varchar(100),'+
+                       'TEMPO_ATIV varchar(100),' +
+                       'ALIMENTACAO integer,' +
+                       'ALIMENTOS varchar(100),' +
+                       'SONO integer,' +
+                       'TEMPO_SONO varchar(100),'+
+                       'PRIMARY KEY (ID_AVLC, ID_PATIENT))'
+
         
         //avaliacao-page-three
         const sqlThree = 'CREATE TABLE IF NOT EXISTS AVLC_THREE (' +
@@ -70,6 +93,12 @@ class Tables{
         });
 
         this.connection.query(sqlOne, (error)=>{
+            if (error) {
+                console.log(error);
+            }            
+        });
+
+        this.connection.query(sqlTWo, (error)=>{
             if (error) {
                 console.log(error);
             }            
