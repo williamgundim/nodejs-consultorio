@@ -64,10 +64,11 @@ class Tables{
                        'INTESTINO integer,' +
                        'LIQUIDOS integer,' +
                        'LITROS varchar(100),' +
+                       'TABACO integer,' +
                        'QTDE_TABACO varchar(100),' +
                        'ALCOOL integer,' +
                        'QTDE_ALCOOL integer,' +
-                       'SOL integer,' +
+                       'SOL integer,' + 
                        'FILTROSOLAR varchar(100),' +
                        'LENTECONTATO integer,' +
                        'ATIVIDADEFISICA integer,' +

@@ -25,7 +25,13 @@ class ModelAvlcTwo{
         const sql = 'INSERT INTO AVLC_TWO SET ?'
 
         const promisse = new Promise((resolve, reject) => {
-            connection.query(sql, body, (error, result)=>{});
+            connection.query(sql, body, (error, result)=>{
+  
+                if (error){
+                    console.log(error)
+                }
+
+            });
 
             resolve('ok');
 
