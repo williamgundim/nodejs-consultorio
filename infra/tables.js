@@ -87,6 +87,13 @@ class Tables{
                          'ID_PATIENT integer,'+
                          'PRIMARY KEY (ID_DOENCA, ID_PATIENT))'
 
+        //checkin
+        const checkinTable = 'CREATE TABLE IF NOT EXISTS CHECKIN (' + 
+                             'ID_CHECKIN integer NOT NULL AUTO_INCREMENT,' +
+                             'ID_PATIENT integer,' +
+                             'DAYOFWEEK date,' +
+                             'PRIMARY KEY (ID_CHECKIN))'
+
         this.connection.query(sql, (error)=>{
             if (error) {
                 console.log(error);
@@ -106,6 +113,12 @@ class Tables{
         });
 
         this.connection.query(sqlThree, (error)=>{
+            if (error) {
+                console.log(error);
+            }            
+        });
+
+        this.connection.query(checkinTable, (error)=>{
             if (error) {
                 console.log(error);
             }            
