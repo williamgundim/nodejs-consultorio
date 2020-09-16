@@ -3,19 +3,19 @@ const getModel = () => {
     return [
                 {
                     description: 'ERITROCITOS',
-                    parameters: '4,0 - 5,5',
+                    parameters: '4,5 - 6,0',
                     result: '',
                     notes: ''
                 },
                 {
                     description: 'HEMOGLOBINA',
-                    parameters: '13,5 - 15,5',
+                    parameters: '14,0 - 16,5',
                     result: '',
                     notes: ''
                 },
                 {
                     description: 'HEMATOCRITO',
-                    parameters: '39 - 47',
+                    parameters: '42 - 50',
                     result: '',
                     notes: '' 
                 },
