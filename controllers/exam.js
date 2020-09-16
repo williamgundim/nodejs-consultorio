@@ -8,9 +8,21 @@ module.exports = app => {
      * Rota para retornar o modelo para inclusao de exames
      */
     app.get('/modelhemograma', (request, response)=> {
-
         model.getHemograma(response);
+    });
 
+    /**
+     * Rota para retornar o modelo para inclusao de exames
+     */
+    app.get('/modelleucograma', (request, response)=> {
+        model.getLeucograma(response);
+    });
+
+    /**
+    * Rota para retornar o modelo para inclusao de exames
+    */
+    app.get('/modeltireoide', (request, response)=> {
+        model.getTireoide(response);
     });
 
 } 
