@@ -73,7 +73,7 @@ module.exports = app => {
     * Estresse
    * Rota para retornar o modelo para inclusao de exames
    */
-    app.get('/exames/modelestresse', (request, response)=> {
+    app.get('/exames/modelestresse/:id', (request, response)=> {
         model.getItems(request.params.id,6,response);  
 
     app.post('/exames/modelestresse', (request, response)=>{
