@@ -25,7 +25,7 @@ class ModelAvlcOne{
         const sql = 'INSERT INTO AVLC_ONE SET ?'
 
         const promisse = new Promise((resolve, reject) => {
-            connection.query(sql, body, (error, result)=>{});
+            connection.query(sql, body, (error, RESULT)=>{});
 
             resolve('ok');
 
@@ -40,7 +40,7 @@ class ModelAvlcOne{
         
         const promisse = new Promise((resolve, reject) => {
 
-            connection.query(sqlDelete, (error, result)=>{});
+            connection.query(sqlDelete, (error, RESULT)=>{});
 
             resolve('ok')
         
@@ -54,12 +54,12 @@ class ModelAvlcOne{
 
         const sql = 'UPDATE AVLC_ONE SET ? WHERE ID = ' + id;
         
-        connection.query(sql, patient, (error, result) =>{
+        connection.query(sql, patient, (error, RESULT) =>{
 
             if (error){
                 response.status(400).json(error) //bad request
             }else{
-                response.status(201).json(result) //create
+                response.status(201).json(RESULT) //create
             }
 
         });
@@ -75,14 +75,14 @@ class ModelAvlcOne{
 
         const sql = `SELECT * FROM AVLC_ONE WHERE ID_PATIENT = ${id}`
 
-        connection.query(sql, (error, result, fields)=>{
+        connection.query(sql, (error, RESULT, fields)=>{
 
         if (error){
             response.status(400).json(error) //bad request.
           }else{
                 
-            if (result.length > 0) {
-                response.status(200).json(result[0]);
+            if (RESULT.length > 0) {
+                response.status(200).json(RESULT[0]);
             }else{
                 response.status(404).json('not found');
             }

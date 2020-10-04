@@ -1,68 +1,157 @@
 const connection = require('../infra/connection');
 
-const modelHemograma = require('./mock/exam-man/hemograma-mock');
-const modelLeucograma = require('./mock/exam-man/leucograma-mock');
-const modelTireoide = require('./mock/exam-man/tireoide-mock');
-const modelGlicemia = require('./mock/exam-man/glicemia-mock');
-const modelLipidograma = require('./mock/exam-man/lipidograma-mock');
-const modelEstresse = require('./mock/exam-man/estresse-mock');
+const leucogramaMan = require('./mock/exam-man/leucograma-mock');
+const hemogramaMan = require('./mock/exam-man/hemograma-mock');
+const tireoideMan = require('./mock/exam-man/tireoide-mock');
+const glicemiaMan = require('./mock/exam-man/glicemia-mock');
+const lipidogramaMan = require('./mock/exam-man/lipidograma-mock');
+const estresseMan = require('./mock/exam-man/estresse-mock');
+
+const leucogramaWoman = require('./mock/exam-woman/leucograma-mock');
+const hemogramaWoman = require('./mock/exam-woman/hemograma-mock');
+const tireoideWoman = require('./mock/exam-woman/tireoide-mock');
+const glicemiaWoman = require('./mock/exam-woman/glicemia-mock');
+const lipidogramaWoman = require('./mock/exam-woman/lipidograma-mock');
+const estresseWoman = require('./mock/exam-woman/estresse-mock');
+
+const { response } = require('express');
 
 
 class ModelExam{
     
+        /**
+     * getItems()
+     */
+    getItems(idPaciente, type, response){
+
+        const sql = `SELECT DESCRIPTION, PARAMETERS, NOTES, RESULT FROM EXAMS 
+                    WHERE ID_PATIENT = ${idPaciente} AND TYPE = ${type}`
+
+        connection.query(sql, (error, RESULT) => {
+
+            let oJson = {};
+            let aList = [];
+            let x = 0;
+
+            if (error){
+                response.status(400).json(error) //bad request.
+            }else{
+                
+                if (RESULT.length <= 0) {
+                    
+                    oJson = {
+                        'ID_PATIENT':idPaciente,
+                        'TYPE':type,
+                        'ITEMS': this.getModel(type) 
+                    }
+                    response.status(200).json(oJson);
+                }
+                else
+                {
+                
+                    for (x = 0; x < RESULT.length; x++){                 
+                        aList.push( RESULT[x] );
+                    }
+
+                    oJson = {
+                        'ID_PATIENT':idPaciente,
+                        'TYPE':type,
+                        'ITEMS': aList,
+                    }
+
+                    response.status(200).json(oJson);
+                }
+
+            }
+        })
+
+    }
+
+    getModel(type){
+        
+        switch (type) {
+            case 1:
+                return hemogramaMan.getModel();
+            case 2:
+                return leucogramaMan.getModel();
+            case 3:
+                return tireoideMan.getModel();
+            case 4:
+                return glicemiaMan.getModel();
+            case 5:
+                return lipidogramaMan.getModel();
+            case 6:
+                return estresseMan.getModel();
+        }        
+        
+    }
+
     /**
-     * Retorna o modelo padrão para cadastro de Hemograma
+     * create new item
+     * @param {*} patient 
      * @param {*} response 
      */
-    getHemograma(response){
-        var model = modelHemograma.getModel();
-        response.status(200).json(model);
+    createItem(body, type, response){
+
+        const idPaciente = body.ID_PATIENT;
+
+        this.deleteItems(idPaciente)
+            .then(
+                    this.insertItems(idPaciente, type, body.ITEMS)
+                        .then(  response.status(200).json('ok'))
+                        .catch( response.status(400).json('bad request')))
+            .catch();
+
     }
 
-    /**
-     * Retorna o modelo padrão para o cadastro de Leucograma
-     * @param {*} response 
-     */
-    getLeucograma(response){
-        var model = modelLeucograma.getModel();
-        response.status(200).json(model);
+
+    insertItems(idPaciente, type, listItems){
+        let sql = ''
+        const promisse = new Promise( (resolve, project) =>{
+
+            listItems.forEach( item => {
+            
+                sql = 'INSERT INTO EXAMS (ID_PATIENT, TYPE, DESCRIPTION, PARAMETERS, NOTES, RESULT)' + 
+                      'VALUES (' + idPaciente + ',' +
+                      type + ',' + 
+                      '"' + item.DESCRIPTION + '",' +
+                      '"' + item.PARAMETERS + '",' +
+                      '"' + item.NOTES + '",' +
+                      '"' + item.RESULT + '")'
+                
+                connection.query(sql, item, (error, RESULT)=>{ 
+                    
+                    if (error) {
+                        console.log(error);
+                    }  
+                    
+                })
+    
+            });
+
+            resolve('ok');
+
+        })
+
+        return promisse
     }
 
-    /**
-     * Retorna o modelo padrão para o cadastro de Tireoide
-     * @param {*} response 
-     */
-    getTireoide(response){
-        var model = modelTireoide.getModel();
-        response.status(200).json(model);
+    deleteItems(idPaciente){
+        let sqlDelete = `DELETE FROM EXAMS WHERE ID_PATIENT = ${idPaciente} AND TYPE = ${1}`
+        
+        const promisse = new Promise((resolve, reject) => {
+
+            connection.query(sqlDelete, (error, RESULT)=>{});
+
+            resolve('ok')
+        
+        });
+
+        return promisse
+        
     }
 
-    /**
-     * Retorna o modelo padrão
-     * @param {*} response 
-     */
-    getGlicemia(response){
-        var model = modelGlicemia.getModel();
-        response.status(200).json(model);
-    }
 
-    /**
-    * Retorna o modelo padrão
-    * @param {*} response 
-    */
-    getLipidograma(response){
-        var model = modelLipidograma.getModel();
-        response.status(200).json(model);
-    }
-
-    /**
-    * Retorna o modelo padrão
-    * @param {*} response 
-    */
-    getEstresse(response){
-        var model = modelEstresse.getModel();
-        response.status(200).json(model);
-    }
 
 }
 

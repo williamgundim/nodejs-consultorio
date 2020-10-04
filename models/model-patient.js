@@ -11,12 +11,12 @@ class ModelPatients{
 
         const sql = 'INSERT INTO PATIENTS SET ?'
 
-        connection.query(sql, patient, (error, result)=>{
+        connection.query(sql, patient, (error, RESULT)=>{
 
             if (error){
                 response.status(400).json(error) //bad request
             }else{
-                response.status(201).json(result) //create
+                response.status(201).json(RESULT) //create
             }
 
         })
@@ -27,12 +27,12 @@ class ModelPatients{
 
         const sql = 'UPDATE PATIENTS SET ? WHERE ID = ' + id;
         
-        connection.query(sql, patient, (error, result) =>{
+        connection.query(sql, patient, (error, RESULT) =>{
 
             if (error){
                 response.status(400).json(error) //bad request
             }else{
-                response.status(201).json(result) //create
+                response.status(201).json(RESULT) //create
             }
 
         });
@@ -48,7 +48,7 @@ class ModelPatients{
 
         const sql = 'SELECT * FROM PATIENTS'
 
-        connection.query(sql, (error, result, fields)=>{
+        connection.query(sql, (error, RESULT, fields)=>{
 
             let oJson = {};
             let aArray = [];
@@ -58,8 +58,8 @@ class ModelPatients{
                 response.status(400).json(error) //bad request.
             }else{
                 
-                for (x = 0; x < result.length; x++){                 
-                    aArray.push( result[x] );
+                for (x = 0; x < RESULT.length; x++){                 
+                    aArray.push( RESULT[x] );
                 }
 
                 oJson = {
@@ -83,12 +83,12 @@ class ModelPatients{
 
         const sql = `SELECT * FROM PATIENTS WHERE ID = ${id} `;
 
-        connection.query(sql, (error, results, fields)=>{
+        connection.query(sql, (error, RESULTs, fields)=>{
 
             if (error){
                 response.status(400).json(error) //bad request.
             }else{
-                response.status(200).json(results[0])// ok.
+                response.status(200).json(RESULTs[0])// ok.
             }
 
         })

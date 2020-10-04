@@ -1,46 +1,46 @@
 const getModel = () => {
     return [
                 {
-                    description: 'COLESTEROL TOTAL',
-                    parameters: '200 - 240',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'COLESTEROL TOTAL',
+                    PARAMETERS: '200 - 240',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'HDL',
-                    parameters: '45 - 90',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'HDL',
+                    PARAMETERS: '45 - 90',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'LDL',
-                    parameters: '< 100',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'LDL',
+                    PARAMETERS: '< 100',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'TRIGLICERIDES',
-                    parameters: '< 100 (70)',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'TRIGLICERIDES',
+                    PARAMETERS: '< 100 (70)',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'RELAÇÃO TGS/HDL',
-                    parameters: '< 2',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RELAÇÃO TGS/HDL',
+                    PARAMETERS: '< 2',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'RELAÇÃO CT/HDL',
-                    parameters: '< 3,4',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RELAÇÃO CT/HDL',
+                    PARAMETERS: '< 3,4',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'RELAÇÃO LSL/HDL',
-                    parameters: '< 2,3',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RELAÇÃO LSL/HDL',
+                    PARAMETERS: '< 2,3',
+                    RESULT: '',
+                    NOTES: ''
                 }
             ]
     };

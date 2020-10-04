@@ -1,64 +1,64 @@
 const getModel = () => {
 return [
             {
-                description: 'LEUCOCITOS',
-                parameters: '4000 - 6.500',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'LEUCOCITOS',
+                PARAMETERS: '4000 - 6.500',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'NEUTROFILOS',
-                parameters: '45-55',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'NEUTROFILOS',
+                PARAMETERS: '45-55',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'SEGMENTADOS',
-                parameters: '45-55',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'SEGMENTADOS',
+                PARAMETERS: '45-55',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'BASTONETES',
-                parameters: 'Infla.aguda',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'BASTONETES',
+                PARAMETERS: 'Infla.aguda',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'EOSINOFILOS',
-                parameters: '< 1',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'EOSINOFILOS',
+                PARAMETERS: '< 1',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'BASOFILOS',
-                parameters: '< 0,5',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'BASOFILOS',
+                PARAMETERS: '< 0,5',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'MONOCITOS',
-                parameters: '3-8',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'MONOCITOS',
+                PARAMETERS: '3-8',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'LINFOCITOS',
-                parameters: '25-35',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'LINFOCITOS',
+                PARAMETERS: '25-35',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'RELAÇÃO NEUT./LINF',
-                parameters: '< 1,5',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'RELAÇÃO NEUT./LINF',
+                PARAMETERS: '< 1,5',
+                RESULT: '',
+                NOTES: ''
             },
             {
-                description: 'PLAQUETAS',
-                parameters: '250-300',
-                result: '',
-                notes: ''
+                DESCRIPTION: 'PLAQUETAS',
+                PARAMETERS: '250-300',
+                RESULT: '',
+                NOTES: ''
             }
         ]
 };

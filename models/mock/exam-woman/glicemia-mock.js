@@ -1,34 +1,34 @@
 const getModel = () => {
     return [
                 {
-                    description: 'GLICOSE DE JEJUM',
-                    parameters: '80 - 90 mg/dl',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'GLICOSE DE JEJUM',
+                    PARAMETERS: '80 - 90 mg/dl',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'GLICOSE 2 HORAS/ POS PRANDIAL',
-                    parameters: '140 - 200 (>200)',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'GLICOSE 2 HORAS/ POS PRANDIAL',
+                    PARAMETERS: '140 - 200 (>200)',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'INSULINA',
-                    parameters: '<6 - 8',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'INSULINA',
+                    PARAMETERS: '<6 - 8',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'HEMOGLOBINA GLICADA',
-                    parameters: '< 5,0%',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'HEMOGLOBINA GLICADA',
+                    PARAMETERS: '< 5,0%',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'HOMA IR',
-                    parameters: '< 2',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'HOMA IR',
+                    PARAMETERS: '< 2',
+                    RESULT: '',
+                    NOTES: ''
                 }
             ]
     };

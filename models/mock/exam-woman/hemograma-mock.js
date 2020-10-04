@@ -2,40 +2,40 @@ const getModel = () => {
     
     return [
                 {
-                    description: 'ERITROCITOS',
-                    parameters: '4,0 - 5,5',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'ERITROCITOS',
+                    PARAMETERS: '4,0 - 5,5',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'HEMOGLOBINA',
-                    parameters: '13,5 - 15,5',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'HEMOGLOBINA',
+                    PARAMETERS: '13,5 - 15,5',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'HEMATOCRITO',
-                    parameters: '39 - 47',
-                    result: '',
-                    notes: '' 
+                    DESCRIPTION: 'HEMATOCRITO',
+                    PARAMETERS: '39 - 47',
+                    RESULT: '',
+                    NOTES: '' 
                 },
                 {
-                    description: 'V.C.M',
-                    parameters: '86 - 92',
-                    result: '',
-                    notes: '' 
+                    DESCRIPTION: 'V.C.M',
+                    PARAMETERS: '86 - 92',
+                    RESULT: '',
+                    NOTES: '' 
                 },
                 {
-                    description: 'H.C.M',
-                    parameters: '27 - 33',
-                    result: '',
-                    notes: ''   
+                    DESCRIPTION: 'H.C.M',
+                    PARAMETERS: '27 - 33',
+                    RESULT: '',
+                    NOTES: ''   
                 },
                 {
-                    description: 'RDW',
-                    parameters: '< 12,6',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RDW',
+                    PARAMETERS: '< 12,6',
+                    RESULT: '',
+                    NOTES: ''
                 }    
             ]
 };

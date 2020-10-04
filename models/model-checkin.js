@@ -25,7 +25,7 @@ class ModelCheckin{
         
         const promisse = new Promise((resolve, project) => {
 
-            connection.query(sqlDelete, (error, result)=>{        
+            connection.query(sqlDelete, (error, RESULT)=>{        
             })
 
             resolve('ok');
@@ -44,7 +44,7 @@ class ModelCheckin{
             
                 sql = `INSERT INTO CHECKIN (ID_PATIENT, DAYOFWEEK) VALUES (${idPaciente},?)`;
                 
-                connection.query(sql, item, (error, result)=>{        
+                connection.query(sql, item, (error, RESULT)=>{        
                 })
     
             });
@@ -63,7 +63,7 @@ class ModelCheckin{
 
         const sql = `SELECT DAYOFWEEK FROM CHECKIN WHERE ID_PATIENT = ${idPaciente}`
 
-        connection.query(sql, (error, result) => {
+        connection.query(sql, (error, RESULT) => {
 
             let oJson = {};
             let aList = [];
@@ -73,8 +73,8 @@ class ModelCheckin{
                 response.status(400).json(error) //bad request.
             }else{
                 
-                for (x = 0; x < result.length; x++){                 
-                    aList.push( result[x].ID_DOENCA );
+                for (x = 0; x < RESULT.length; x++){                 
+                    aList.push( RESULT[x].ID_DOENCA );
                 }
 
                 oJson = {

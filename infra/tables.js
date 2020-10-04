@@ -94,6 +94,19 @@ class Tables{
                              'DAYOFWEEK date,' +
                              'PRIMARY KEY (ID_CHECKIN))'
 
+
+        //exames
+        const exames = 'CREATE TABLE IF NOT EXISTS EXAMS (' +
+                       'ID_EXAMS INTEGER NOT NULL AUTO_INCREMENT,' +
+                       'ID_PATIENT INTEGER,' +
+                       'TYPE INTEGER,' +
+                       'DESCRIPTION VARCHAR(100),' +
+                       'PARAMETERS VARCHAR(100),' +
+                       'NOTES VARCHAR(100),' +
+                       'RESULT VARCHAR(100),' +
+                       'PRIMARY KEY (ID_EXAMS))'
+
+
         this.connection.query(sql, (error)=>{
             if (error) {
                 console.log(error);
@@ -119,6 +132,12 @@ class Tables{
         });
 
         this.connection.query(checkinTable, (error)=>{
+            if (error) {
+                console.log(error);
+            }            
+        });
+
+        this.connection.query(exames, (error)=>{
             if (error) {
                 console.log(error);
             }            

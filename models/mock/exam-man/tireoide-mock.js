@@ -1,52 +1,52 @@
 const getModel = () => {
     return [
                 {
-                    description: 'T3 Livre',
-                    parameters: '3,0 a 3,5pg/ml',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'T3 Livre',
+                    PARAMETERS: '3,0 a 3,5pg/ml',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'T4 Livre',
-                    parameters: '1,06 ate 1,24 ng/dl',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'T4 Livre',
+                    PARAMETERS: '1,06 ate 1,24 ng/dl',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'TSH',
-                    parameters: 'Abaixo de 2 uUL/ml',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'TSH',
+                    PARAMETERS: 'Abaixo de 2 uUL/ml',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'ANTI TPO',
-                    parameters: 'Inferior a 9 Ul/ml',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'ANTI TPO',
+                    PARAMETERS: 'Inferior a 9 Ul/ml',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'TIREOGLOBULINA',
-                    parameters: '8,0 A 13 (ótimo 11,5)',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'TIREOGLOBULINA',
+                    PARAMETERS: '8,0 A 13 (ótimo 11,5)',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'RELAÇÃO T4L/T3L',
-                    parameters: '>0,31 ou 3,1 ou 31',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RELAÇÃO T4L/T3L',
+                    PARAMETERS: '>0,31 ou 3,1 ou 31',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'RT3',
-                    parameters: '0,09 a 0,22 ng/ml',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RT3',
+                    PARAMETERS: '0,09 a 0,22 ng/ml',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'TEMPERATURA BASAL',
-                    parameters: '36,6 - 36,9',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'TEMPERATURA BASAL',
+                    PARAMETERS: '36,6 - 36,9',
+                    RESULT: '',
+                    NOTES: ''
                 }
             ]
     };

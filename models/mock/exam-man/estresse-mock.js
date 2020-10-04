@@ -1,140 +1,140 @@
 const getModel = () => {
     return [
                 {
-                    description: 'GAMA GT',
-                    parameters: '< 16',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'GAMA GT',
+                    PARAMETERS: '< 16',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'TGO',
-                    parameters: '10 - 20',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'TGO',
+                    PARAMETERS: '10 - 20',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'TGP',
-                    parameters: '10 - 20',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'TGP',
+                    PARAMETERS: '10 - 20',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'RELAÇÃO TGO/TGP',
-                    parameters: '< 1',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'RELAÇÃO TGO/TGP',
+                    PARAMETERS: '< 1',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'HOMOCISTEINA',
-                    parameters: '< 8',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'HOMOCISTEINA',
+                    PARAMETERS: '< 8',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'PCR ULTRA',
-                    parameters: '< 1,0 mg/l',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'PCR ULTRA',
+                    PARAMETERS: '< 1,0 mg/l',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'SATURAÇÃO DE TRANSFERRINA',
-                    parameters: '< 30 - 40%',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'SATURAÇÃO DE TRANSFERRINA',
+                    PARAMETERS: '< 30 - 40%',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'FERRITINA',
-                    parameters: '70 - 100',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'FERRITINA',
+                    PARAMETERS: '70 - 100',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'ACIDO URICO',
-                    parameters: '< 4,5',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'ACIDO URICO',
+                    PARAMETERS: '< 4,5',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'VITAMINA A (RETINOL)',
-                    parameters: '4ª quartil',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'VITAMINA A (RETINOL)',
+                    PARAMETERS: '4ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'VITAMINA D 25',
-                    parameters: '> 70',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'VITAMINA D 25',
+                    PARAMETERS: '> 70',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'VITAMINA D 1,25',
-                    parameters: '',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'VITAMINA D 1,25',
+                    PARAMETERS: '',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'VITAMINA C',
-                    parameters: '4ª quartil',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'VITAMINA C',
+                    PARAMETERS: '4ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'VITAMINA B12',
-                    parameters: '4ª quartil',
-                    result: '',
-                    notes: ''
-                },
-                ,
-                {
-                    description: 'MANGANES SERICO',
-                    parameters: '20 - 25',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'VITAMINA B12',
+                    PARAMETERS: '4ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 ,
                 {
-                    description: 'ACIDO FOLICO',
-                    parameters: '',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'MANGANES SERICO',
+                    PARAMETERS: '20 - 25',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 ,
                 {
-                    description: 'PTH',
-                    parameters: '25 - 40',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'ACIDO FOLICO',
+                    PARAMETERS: '',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 ,
                 {
-                    description: 'CALCIO IONICO',
-                    parameters: '4,6 - 6,0',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'PTH',
+                    PARAMETERS: '25 - 40',
+                    RESULT: '',
+                    NOTES: ''
+                },
+                ,
+                {
+                    DESCRIPTION: 'CALCIO IONICO',
+                    PARAMETERS: '4,6 - 6,0',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'ZINCO',
-                    parameters: '4ª quartil',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'ZINCO',
+                    PARAMETERS: '4ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'SELENIO',
-                    parameters: '4ª quartil',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'SELENIO',
+                    PARAMETERS: '4ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'MAGNESIO',
-                    parameters: '4ª quartil',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'MAGNESIO',
+                    PARAMETERS: '4ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
                 {
-                    description: 'COBRE',
-                    parameters: '1ª quartil',
-                    result: '',
-                    notes: ''
+                    DESCRIPTION: 'COBRE',
+                    PARAMETERS: '1ª quartil',
+                    RESULT: '',
+                    NOTES: ''
                 },
             ]
     };
